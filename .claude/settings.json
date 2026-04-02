@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "defaultMode": "auto",
+    "allow": [
+      "Bash(git:*)",
+      "Bash(npm:*)",
+      "Bash(node:*)",
+      "Read",
+      "Edit",
+      "Write",
+      "Glob",
+      "Grep"
+    ]
+  },
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo \"{\\\"systemMessage\\\": \\\"Remote control session started at $(date -u '+%Y-%m-%dT%H:%M:%SZ').\\\"}\"",
+            "statusMessage": "Initializing remote session..."
+          }
+        ]
+      }
+    ]
+  }
+}
